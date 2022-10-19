@@ -1,9 +1,12 @@
 package com.api.testapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.api.testapplication.R;
 
 public class SearchActivity extends AppCompatActivity{
@@ -23,6 +26,6 @@ public class SearchActivity extends AppCompatActivity{
     }
     private void getSearchResults(String inputText)
     {
-        //Enter the code here
+        startActivity(new Intent(this, DisplayActivity.class).putExtra("pageNo", inputText));
     }
 }
